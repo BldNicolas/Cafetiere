@@ -11,10 +11,10 @@ public class Cafetiere {
     }
 
     public void remplirTasse(Tasse tasse, TypeCafe typeCafe, Float quantiteARemplir) {
-        tasse.cafe.typeCafe = typeCafe;
-        if (quantiteARemplir > tasse.quantiteCafeMax) {
-            tasse.quantiteCafeMax = quantiteARemplir;
+        if (tasse.cafe != null && tasse.cafe.typeCafe != typeCafe) {
+            tasse.cafe = new Cafe(TypeCafe.BATARD, tasse.cafe.quantiteLiquideMl + quantiteARemplir);
+        } else {
+            tasse.cafe = new Cafe(typeCafe, quantiteARemplir);
         }
-        tasse.cafe.quantiteLiquideMl = quantiteARemplir;
     }
 }

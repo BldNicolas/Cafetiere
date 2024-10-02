@@ -3,7 +3,7 @@ package Cafetiere;
 import javax.swing.JOptionPane;
 
 
-public class AMain {
+public class MainExo1 {
 
 	public static void main(String[] args)
 	{
